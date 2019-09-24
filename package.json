@@ -1,0 +1,29 @@
+{
+  "name": "totaljs-mongoose-rest-example",
+  "version": "1.0.0",
+  "description": "Example TotalJS with Mongoose 5 for create a simple Rest API",
+  "main": "debug.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aalfiann/totaljs-mongoose-rest-example.git"
+  },
+  "keywords": [
+    "totaljs",
+    "mongoose",
+    "rest-api",
+    "example"
+  ],
+  "author": "M ABD AZIZ ALFIAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aalfiann/totaljs-mongoose-rest-example/issues"
+  },
+  "homepage": "https://github.com/aalfiann/totaljs-mongoose-rest-example#readme",
+  "dependencies": {
+    "mongoose": "^5.7.1",
+    "total.js": "^3.2.4"
+  }
+}
