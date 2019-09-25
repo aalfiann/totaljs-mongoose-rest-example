@@ -1,5 +1,5 @@
 # totaljs-mongoose-rest-example
-Example TotalJS with Mongoose 5 for create a simple Rest API
+Example TotalJS with Mongoose 5 for create a simple CRUD Rest API
 
 - Download this example
 - run `$ npm install`

@@ -1,6 +1,7 @@
 exports.install = function() {
-	CORS('/api/*', ['get', 'post', 'put', 'delete'], true);
+
 	ROUTE('/', view_plain);
+	
 };
 
 function view_plain() {

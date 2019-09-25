@@ -11,3 +11,4 @@ mail_address_copy               :
 
 // MongoDB settings
 mongodb_url                     : mongodb://127.0.0.1:27017/app
+mongodb_debug_event             : true

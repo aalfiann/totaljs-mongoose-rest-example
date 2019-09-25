@@ -1,10 +1,10 @@
-
-const mongoose = require(F.path.definitions('mongoose_schema'));
-
 NEWSCHEMA('User').make(function(schema) {
 
+    // Better to use var instead const
+    var mongoose = require(F.path.definitions('mongoose_schema'));
+
     // Schema for Mongoose
-    const userSchema = {
+    var userSchema = {
         name: {
           type: String,
           required: [true, "A name is required"],
@@ -25,9 +25,11 @@ NEWSCHEMA('User').make(function(schema) {
     schema.define('name', 'string', true);
     schema.define('address', 'string');
 
+    // Listen schema validation error from totaljs
     mongoose.schemaErrorBuilder('custom');
     schema.setError((error) => { error.setTransform('custom') });
 
+    // List User
     schema.addWorkflow('list',function($) {
         User.find().then((response) => {
             mongoose.successResponse($,'Data found',response);
@@ -36,6 +38,7 @@ NEWSCHEMA('User').make(function(schema) {
         });
     });
 
+    // Add User
     schema.addWorkflow('add', function($) {
         var body = $.model.$clean();
         new User(body).save().then((response) => {
@@ -45,6 +48,7 @@ NEWSCHEMA('User').make(function(schema) {
         });
     });
 
+    // Search User
     schema.addWorkflow('search', function($) {
         var query = $.query;
         User.find({
@@ -59,6 +63,7 @@ NEWSCHEMA('User').make(function(schema) {
         });
     });
 
+    // Update User
     schema.addWorkflow('update', function($) {
         var body = $.model.$clean();
         User.findOneAndUpdate({
@@ -75,6 +80,7 @@ NEWSCHEMA('User').make(function(schema) {
         });
     });
 
+    // Delete User
     schema.addWorkflow('delete', function($) {
         User.deleteOne({
             _id:$.id
