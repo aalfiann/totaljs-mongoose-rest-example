@@ -1,7 +1,7 @@
 {
   "name": "totaljs-mongoose-rest-example",
   "version": "1.0.0",
-  "description": "Example TotalJS with Mongoose 5 for create a simple Rest API",
+  "description": "Example TotalJS with Mongoose 5 for create a simple CRUD Rest API",
   "main": "debug.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
